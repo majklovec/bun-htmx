@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Majkl si hraje</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/htmx.org/dist/htmx.min.js"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/debug.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <style>
+      :root {
+        --spacing: 0.2rem;
+      }
+    </style>
+  </head>
+
+  <body hx-ws="connect:/ws">
+    <main class="container">
+      <nav aria-label="menu" hx-boost="true">
+        <ul>
+          <li><strong>Brand</strong></li>
+        </ul>
+        <ul>
+          <li><a href="#">Link</a></li>
+          <li>
+            <details role="list" dir="rtl">
+              <summary aria-haspopup="listbox" role="link">Dropdown</summary>
+              <ul role="listbox">
+                <li><a>Action</a></li>
+                <li><a>Another action</a></li>
+                <li><a>Something else here</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+
+      <nav aria-label="breadcrumb" hx-boost="true">
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/category">Category</a></li>
+          <li>Page</li>
+        </ul>
+      </nav>
+      <article>
+        <div id="time"></div>
+        <div id="messages" style="overflow: auto; height: 200px" />
+      </article>
+    </main>
+    <footer class="container">
+      <form hx-ws="send">
+        <input type="text" name="message" />
+      </form>
+    </footer>
+  </body>
+</html>

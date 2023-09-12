@@ -1,0 +1,17 @@
+{
+  "name": "bun-web-app",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "bun-types": "^1.0.1"
+  },
+  "scripts": {
+    "build": "bun build",
+    "dev": "bun --hot index.ts",
+    "start": "bun dev"
+  },
+  "dependencies": {
+    "sass": "^1.66.1"
+  }
+}
