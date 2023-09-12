@@ -10,8 +10,5 @@
     "build": "bun build",
     "dev": "bun --hot index.ts",
     "start": "bun dev"
-  },
-  "dependencies": {
-    "sass": "^1.66.1"
   }
 }
